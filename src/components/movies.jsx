@@ -92,25 +92,32 @@ class Movies extends Component {
     );
     return (
       <>
-        <Filters
-          genres={this.state.genres}
-          onFilter={this.handleFilter}
-          activeGenre={this.state.activeGenre}
-        />
-        <h2>Showing {filteredMovies.length} in the Database</h2>
-        <MoviesTable
-          movies={movies}
-          onDelete={this.handleDelete}
-          onLiked={this.handleLike}
-          onSort={this.handleSort}
-          sortColumn={this.state.sortColumn}
-        />
-        <Pagination
-          totalMovies={sortedMovies.length}
-          pageSize={this.state.pageSize}
-          onPageChange={this.handlePageChange}
-          currentPage={this.state.currentPage}
-        />
+        <div className="moviesPage">
+          <hr></hr>
+          <h3>Showing {filteredMovies.length} in the Database</h3>
+          <hr></hr>
+          <div className="movies-tabs">
+            <Filters
+              genres={this.state.genres}
+              onFilter={this.handleFilter}
+              activeGenre={this.state.activeGenre}
+            />
+            <MoviesTable
+              movies={movies}
+              onDelete={this.handleDelete}
+              onLiked={this.handleLike}
+              onSort={this.handleSort}
+              sortColumn={this.state.sortColumn}
+            />
+          </div>
+
+          <Pagination
+            totalMovies={sortedMovies.length}
+            pageSize={this.state.pageSize}
+            onPageChange={this.handlePageChange}
+            currentPage={this.state.currentPage}
+          />
+        </div>
       </>
     );
   }

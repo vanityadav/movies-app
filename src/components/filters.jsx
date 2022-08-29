@@ -3,7 +3,7 @@ class Filters extends Component {
   render() {
     return (
       <div
-        className="nav flex-column nav-pills"
+        className="nav flex-column nav-pills marginfilter"
         id="v-pills-tab"
         role="tablist"
         aria-orientation="vertical"
@@ -12,8 +12,8 @@ class Filters extends Component {
           <a
             className={
               g.value === this.props.activeGenre
-                ? "nav-link active"
-                : "nav-link"
+                ? "nav-link words active"
+                : "nav-link words"
             }
             id="v-pills-home-tab"
             data-toggle="pill"

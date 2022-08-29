@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Like from "../components/like";
 
 class TableBody extends Component {
@@ -8,7 +9,9 @@ class TableBody extends Component {
       <tbody>
         {data.map((movie) => (
           <tr key={movie._id}>
-            <td>{movie.title}</td>
+            <td>
+              <Link to={`/movies/${movie._id}`}> {movie.title} </Link>
+            </td>
             <td>{movie.genre.name}</td>
             <td>{movie.numberInStock}</td>
             <td>{movie.dailyRentalRate}</td>
