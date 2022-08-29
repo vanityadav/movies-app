@@ -4,8 +4,11 @@
   align-items: center;
   flex-direction: column;
 }
+
 .navbar {
   margin-bottom: 40px;
+  font-size: 30px;
+  font-weight: 800;
 }
 .movies-tabs {
   display: flex;
