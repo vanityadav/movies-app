@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Navigate } from "react-router-dom";
 
 function MovieForms() {
   const { id } = useParams();
