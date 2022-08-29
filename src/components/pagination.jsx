@@ -7,8 +7,8 @@ const Pagination = (props) => {
   const pagearray = _.range(1, pages + 1);
 
   return (
-    <nav aria-label="Page navigation example">
-      <ul className="pagination">
+    <nav aria-label="Page navigation example ">
+      <ul className="pagination m-2">
         <li className="page-item">
           <a className="page-link">Previous</a>
         </li>
